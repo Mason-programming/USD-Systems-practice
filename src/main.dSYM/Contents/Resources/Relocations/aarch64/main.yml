@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/masonkirby/Desktop/USD_System/src/main'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z4testi, symObjAddr: 0x0, symBinAddr: 0x100003F44, symSize: 0x14 }
+  - { offsetInCU: 0x2C72, offset: 0x2C72, size: 0x8, addend: 0x0, symName: __Z4testi, symObjAddr: 0x0, symBinAddr: 0x100003F44, symSize: 0x14 }
+  - { offsetInCU: 0x2C9E, offset: 0x2C9E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x14, symBinAddr: 0x100003F58, symSize: 0x48 }
+...
