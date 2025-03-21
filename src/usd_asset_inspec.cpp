@@ -9,7 +9,7 @@ int main(){
 
     std::string file = ""; 
 
-    pxr::UsdStageRefPtr stge = pxr::UsdStage::Open(file); 
+    pxr::UsdStageRefPtr stage = pxr::UsdStage::Open(file); 
 
     if(!stage){
         std::cerr << "The stage did not successfully open" << std::endl; 
@@ -18,8 +18,16 @@ int main(){
 
     for(const auto&prim : stage->Traverse())
     { 
-       std::cout << prim.GetPrim() << std::endl; 
+       if(prim.IsA<UsdGeomXform>())
+            std::cout << prim.GetPath() << std::endl; 
+       else if(prim.IsA<UsdGeomMesh>())
+            std::cout << prim.GetPath() << std::endl; 
+       else if(prim.IsA<UsdGeomCamera>())
+            std::cout << prim.GetPath << std::endl; 
     }
+
+
+    
 
     return 0; 
 }
